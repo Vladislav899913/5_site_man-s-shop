@@ -72,6 +72,7 @@ body {
   font-size: 12px;
   line-height: 16px;
   color: #969696;
+  overflow: hidden;
 }
 
 .header_down {
@@ -79,15 +80,13 @@ body {
 }
 
 .header_up_left {
-  min-width: 385px;
   display: flex;
   justify-content: space-between;
+  margin-right: 30px;
 }
 
 .header_up_right {
-  min-width: 135px;
-  display: flex;
-  justify-content: space-between;
+  text-align: right;
 }
 
 .header_up_right_text {
@@ -216,4 +215,158 @@ body {
   /* or 24px */
   text-align: center;
   text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .header_down_right {
+    display: none;
+  }
+}
+
+@media (max-width: 425px) {
+  /* .header_up_right {
+    max-width: 135px;
+  } */
+}
+
+/* SEASON_COLLECTION */
+/* SEASON */
+.season_collection {
+  height: 730px;
+  display: flex;
+}
+
+.season {
+  background-color: #000;
+  width: 55%;
+  padding-top: 93px;
+  color: #ffffff;
+}
+
+.season_title {
+  font-family: "Playfair Display";
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+}
+
+.season_collection_underline {
+  width: 120px;
+  border: 1px solid #ffffff;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.season_items {
+  display: flex;
+  justify-content: space-between;
+  max-width: 920px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.season_item {
+  width: 30%;
+  min-height: 325px;
+  transition: 0.3s;
+}
+
+.season_item:hover {
+  cursor: pointer;
+}
+
+.season_item_photo {
+  background-color: #191b1c;
+  padding: 55px 30px;
+  margin-bottom: 25px;
+}
+
+.season_item_img {
+  width: 100%;
+}
+
+.season_item_title {
+  font-family: "Playfair Display";
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 10px;
+}
+
+.season_item_price {
+  font-family: "Playfair Display";
+  font-size: 16px;
+  line-height: 19px;
+  color: #d0d0d0;
+}
+
+/* COLLECTION */
+.collection {
+  width: 45%;
+  background: url(/images/season_collection/collection_bg.png) no-repeat;
+  background-size: cover;
+  padding-top: 484px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.collection_text {
+  padding: 0 15px;
+}
+
+.collection_title {
+  font-family: "Playfair Display";
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.collection_underline {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0.1em;
+  padding: 10px 25px;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  color: #000;
+  background-color: #fff;
+  border: none;
+}
+
+@media (max-width: 1024px) {
+  .season_item_photo {
+    background-color: #191b1c;
+    padding: 20px 5px;
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .season_collection {
+    height: 730px;
+    display: block;
+  }
+
+  .season {
+    width: 100%;
+    padding: 50px 0;
+  }
+
+  .collection {
+    width: 100%;
+    padding: 100px 0;
+  }
 }
